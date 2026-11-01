@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar-Mitsva de Lior Dahan — 29 novembre 2026</title>
+  <meta name="description" content="Eyal et Eva Dahan vous invitent à la Bar-Mitsva de leur fils Lior, le dimanche 29 novembre 2026 à 12 h 15, synagogue Or Zoreah, 60 avenue Montgolfier, Livry-Gargan." />
+  <meta property="og:title" content="Bar-Mitsva de Lior Dahan" />
+  <meta property="og:description" content="Dimanche 29 novembre 2026 à 12 h 15 — Synagogue Or Zoreah, 60 avenue Montgolfier, Livry-Gargan" />
+  <meta name="theme-color" content="#0d1b3e" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A1%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1b3e;
+      --navy-2: #142a5c;
+      --gold: #c9a24a;
+      --gold-light: #e8d08f;
+      --cream: #faf6ec;
+      --ink: #1f2433;
+      --muted: #6b6f7d;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Jost", system-ui, sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; }
+    .hebrew { font-family: "Frank Ruhl Libre", serif; direction: rtl; }
+    a { color: inherit; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 6rem 1.5rem 5rem;
+      color: var(--cream);
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(201,162,74,.22), transparent 60%),
+        radial-gradient(ellipse at 50% 120%, var(--navy-2), var(--navy) 70%);
+      overflow: hidden;
+    }
+    .stars { position: absolute; inset: 0; pointer-events: none; }
+    .stars span {
+      position: absolute; width: 2px; height: 2px; border-radius: 50%;
+      background: var(--gold-light); opacity: .0;
+      animation: twinkle 4s ease-in-out infinite;
+    }
+    @keyframes twinkle { 0%,100% { opacity: 0; } 50% { opacity: .9; } }
+    .hero-inner { position: relative; max-width: 760px; animation: rise 1.4s ease both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .magen { width: 72px; height: 72px; margin: 0 auto 1.5rem; color: var(--gold); }
+    .eyebrow {
+      letter-spacing: .4em; text-transform: uppercase; font-size: .78rem;
+      color: var(--gold-light); font-weight: 400;
+    }
+    .hero .hebrew-name {
+      font-size: clamp(3.2rem, 11vw, 6rem); color: var(--gold);
+      line-height: 1.1; margin: 1.2rem 0 .2rem;
+      text-shadow: 0 0 40px rgba(201,162,74,.35);
+    }
+    .hero h1 {
+      font-size: clamp(3.4rem, 12vw, 7rem); font-weight: 400; line-height: 1;
+      font-style: italic; letter-spacing: .02em;
+    }
+    .hero .surname { display: block; font-size: .38em; font-style: normal; letter-spacing: .5em; text-transform: uppercase; margin-top: .6rem; color: var(--gold-light); }
+    .divider { display: flex; align-items: center; justify-content: center; gap: .8rem; margin: 2rem auto; color: var(--gold); }
+    .divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .divider::after { transform: scaleX(-1); }
+    .hero-date { font-family: "Cormorant Garamond", serif; font-size: clamp(1.3rem, 4vw, 1.75rem); }
+    .hero-date small { display: block; font-family: "Frank Ruhl Libre", serif; font-size: .75em; color: var(--gold-light); margin-top: .3rem; }
+    .scroll-cue {
+      position: absolute; bottom: 1.8rem; left: 50%; transform: translateX(-50%);
+      color: var(--gold-light); font-size: .75rem; letter-spacing: .3em; text-transform: uppercase;
+      text-decoration: none; opacity: .8;
+    }
+    .scroll-cue::after { content: ""; display: block; width: 1px; height: 36px; margin: .6rem auto 0; background: var(--gold); animation: cue 2s ease-in-out infinite; transform-origin: top; }
+    @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+    /* ---------- Music button ---------- */
+    .music-btn {
+      position: fixed; top: 1rem; right: 1rem; z-index: 50;
+      display: none; align-items: center; gap: .5rem;
+      padding: .55rem 1rem; border-radius: 999px;
+      border: 1px solid rgba(201,162,74,.6);
+      background: rgba(13,27,62,.75); color: var(--gold-light);
+      font: 400 .8rem "Jost", sans-serif; letter-spacing: .08em;
+      backdrop-filter: blur(8px); cursor: pointer;
+    }
+    .music-btn.available { display: inline-flex; }
+    .music-btn .bars { display: inline-flex; gap: 2px; align-items: flex-end; height: 12px; }
+    .music-btn .bars i { width: 2px; background: var(--gold); height: 4px; }
+    .music-btn.playing .bars i { animation: eq .9s ease-in-out infinite; }
+    .music-btn.playing .bars i:nth-child(2) { animation-delay: .2s; }
+    .music-btn.playing .bars i:nth-child(3) { animation-delay: .4s; }
+    @keyframes eq { 0%,100% { height: 3px; } 50% { height: 12px; } }
+
+    /* ---------- Sections ---------- */
+    section { padding: 5.5rem 1.5rem; }
+    .container { max-width: 880px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 2.8rem; }
+    .section-title .eyebrow { color: var(--gold); }
+    .section-title h2 { font-size: clamp(2.2rem, 6vw, 3.2rem); color: var(--navy); margin-top: .4rem; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Invitation card */
+    .invitation-card {
+      position: relative; max-width: 640px; margin: 0 auto; text-align: center;
+      background: #fff; padding: 3.5rem 2rem; border-radius: 4px;
+      box-shadow: 0 30px 60px -30px rgba(13,27,62,.35);
+    }
+    .invitation-card::before {
+      content: ""; position: absolute; inset: 12px; border: 1px solid var(--gold); pointer-events: none;
+    }
+    .invitation-card::after {
+      content: ""; position: absolute; inset: 18px; border: 1px solid rgba(201,162,74,.35); pointer-events: none;
+    }
+    .invitation-card .bsd { position: absolute; top: 28px; right: 34px; font-size: .9rem; color: var(--muted); }
+    .invitation-card p { font-size: 1.08rem; color: var(--ink); }
+    .invitation-card .parents { font-family: "Cormorant Garamond", serif; font-size: 1.9rem; color: var(--navy); margin: .6rem 0 1rem; font-weight: 600; }
+    .invitation-card .child { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 3rem; color: var(--gold); line-height: 1.1; margin: .8rem 0; }
+    .invitation-card .details { margin-top: 1.8rem; font-family: "Cormorant Garamond", serif; font-size: 1.35rem; color: var(--navy); }
+    .invitation-card .details strong { font-weight: 600; }
+    .invitation-card .blessing { margin-top: 2rem; font-size: 1.1rem; color: var(--muted); }
+
+    /* Countdown */
+    .countdown-section { background: var(--navy); color: var(--cream); }
+    .countdown-section .section-title h2 { color: var(--cream); }
+    .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 640px; margin: 0 auto; }
+    .unit {
+      text-align: center; padding: 1.6rem .5rem; border-radius: var(--radius);
+      border: 1px solid rgba(201,162,74,.35); background: rgba(255,255,255,.03);
+    }
+    .unit .num { font-family: "Cormorant Garamond", serif; font-size: clamp(2.3rem, 8vw, 3.6rem); color: var(--gold); line-height: 1; font-variant-numeric: tabular-nums; }
+    .unit .lbl { font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold-light); margin-top: .5rem; }
+    .countdown-done { text-align: center; font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--gold); display: none; }
+
+    /* Event cards */
+    .events { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .event {
+      background: #fff; border-radius: var(--radius); padding: 2.2rem 1.8rem; text-align: center;
+      border: 1px solid rgba(201,162,74,.25);
+    }
+    .event .icon { font-size: 2rem; }
+    .event h3 { font-size: 1.8rem; color: var(--navy); margin: .5rem 0 .2rem; }
+    .event .when { color: var(--gold); font-weight: 500; letter-spacing: .05em; }
+    .event .where { margin: .8rem 0 1.4rem; color: var(--muted); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem; text-decoration: none;
+      padding: .75rem 1.3rem; border-radius: 999px; font: 500 .88rem "Jost", sans-serif;
+      letter-spacing: .04em; border: 1px solid var(--navy); color: var(--navy); background: transparent;
+      cursor: pointer; transition: background .25s, color .25s, transform .2s;
+    }
+    .btn:hover { background: var(--navy); color: var(--cream); transform: translateY(-1px); }
+    .btn.gold { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .btn.gold:hover { background: var(--navy); border-color: var(--navy); color: var(--gold-light); }
+    .btn.whatsapp { background: #25d366; border-color: #25d366; color: #fff; }
+    .btn.whatsapp:hover { background: #1da851; border-color: #1da851; }
+
+    /* RSVP */
+    .rsvp-card {
+      max-width: 620px; margin: 0 auto; background: #fff; border-radius: var(--radius);
+      padding: 2.5rem 2rem; box-shadow: 0 30px 60px -35px rgba(13,27,62,.4);
+    }
+    .field { margin-bottom: 1.3rem; }
+    .field label, .field legend { display: block; font-weight: 500; font-size: .9rem; color: var(--navy); margin-bottom: .45rem; }
+    .field input[type=text], .field input[type=number], .field textarea {
+      width: 100%; padding: .85rem 1rem; border: 1px solid #ddd6c4; border-radius: 10px;
+      font: 300 1rem "Jost", sans-serif; background: var(--cream); color: var(--ink);
+    }
+    .field input:focus, .field textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+    .field textarea { min-height: 96px; resize: vertical; }
+    fieldset { border: 0; }
+    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+    .choice input { position: absolute; opacity: 0; }
+    .choice span {
+      display: block; text-align: center; padding: .85rem; border-radius: 10px;
+      border: 1px solid #ddd6c4; cursor: pointer; transition: all .2s; background: var(--cream);
+    }
+    .choice input:checked + span { border-color: var(--gold); background: #fbf1d8; color: var(--navy); font-weight: 500; box-shadow: 0 0 0 1px var(--gold) inset; }
+    .choice input:focus-visible + span { outline: 2px solid var(--gold); }
+    .checks { display: grid; gap: .5rem; }
+    .checks label { display: flex; gap: .6rem; align-items: center; font-weight: 300; color: var(--ink); cursor: pointer; }
+    .checks input { accent-color: var(--gold); width: 18px; height: 18px; }
+    .form-error { color: #b3261e; font-size: .9rem; margin-bottom: 1rem; display: none; }
+    .rsvp-card .btn { width: 100%; justify-content: center; padding: 1rem; font-size: 1rem; }
+    .rsvp-hint { text-align: center; font-size: .85rem; color: var(--muted); margin-top: .9rem; }
+
+    footer {
+      background: var(--navy); color: var(--gold-light); text-align: center; padding: 3rem 1.5rem;
+    }
+    footer .hebrew { font-size: 1.6rem; color: var(--gold); }
+    footer p { font-size: .9rem; opacity: .85; margin-top: .4rem; }
+
+
+    /* Couverture image plein écran */
+    .welcome-screen {
+      position: fixed; inset: 0; z-index: 1000;
+      display: grid; place-items: center;
+      background: #f8f5ef;
+      opacity: 1; visibility: visible;
+      transition: opacity .65s ease, visibility .65s ease;
+    }
+    .welcome-screen.is-opening { opacity: 0; visibility: hidden; pointer-events: none; }
+    .welcome-art {
+      position: relative;
+      width: min(100vw, 75svh);
+      height: min(100svh, 133.333vw);
+      aspect-ratio: 1086 / 1448;
+    }
+    .welcome-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .welcome-open {
+      position: absolute; left: 21.5%; top: 78.0%; width: 57%; height: 8.2%;
+      border: 0; border-radius: 999px; background: transparent;
+      cursor: pointer; color: transparent;
+    }
+    .welcome-open:focus-visible { outline: 3px solid #c9a24a; outline-offset: 4px; }
+    body.welcome-locked { overflow: hidden; }
+    @media (prefers-reduced-motion: reduce) {
+      .welcome-screen { transition: none; }
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 4rem 1.2rem; }
+      .countdown { gap: .5rem; }
+      .unit { padding: 1.1rem .2rem; }
+      .unit .lbl { letter-spacing: .1em; font-size: .62rem; }
+      .invitation-card { padding: 3rem 1.4rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="welcome-locked">
+
+  <!-- Couverture illustrée : le bouton transparent est positionné sur le bouton dessiné dans l'image. -->
+  <div class="welcome-screen" id="welcome-screen">
+    <div class="welcome-art">
+      <img src="couverture-lior.png" alt="Invitation de Lior Dahan — Ouvrir l'invitation" />
+      <button class="welcome-open" id="welcome-open" type="button" aria-label="Ouvrir l'invitation et démarrer la musique"></button>
+    </div>
+  </div>
+
+  <!-- Musique de fond : déposez un fichier « musique.mp3 » à côté de index.html.
+       Le bouton n'apparaît que si le fichier est présent. -->
+  <audio id="bg-music" src="musique.mp3" loop preload="metadata"></audio>
+  <button class="music-btn" id="music-btn" type="button" aria-pressed="false">
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="music-label">Musique</span>
+  </button>
+
+  <!-- ========== ACCUEIL ========== -->
+  <header class="hero" id="accueil">
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <svg class="magen" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <polygon points="50,6 89,74 11,74" />
+        <polygon points="50,94 11,26 89,26" />
+      </svg>
+      <p class="eyebrow">Bar-Mitsva</p>
+      <p class="hebrew hebrew-name" lang="he">ליאור</p>
+      <h1>Lior <span class="surname">Dahan</span></h1>
+      <div class="divider">✦</div>
+      <p class="hero-date">
+        Dimanche 29 novembre 2026 · 12 h 15
+        <small class="hebrew" lang="he">כ״ג בכסלו תשפ״ז</small>
+      </p>
+    </div>
+    <a href="#invitation" class="scroll-cue">Découvrir</a>
+  </header>
+
+  <!-- ========== INVITATION ========== -->
+  <section id="invitation">
+    <div class="container">
+      <div class="invitation-card reveal">
+        <span class="bsd hebrew" lang="he">בס״ד</span>
+        <p>Avec l'aide de D.ieu,</p>
+        <p class="parents">Eyal &amp; Eva Dahan</p>
+        <p>ont la joie de vous convier à la Bar-Mitsva<br />de leur fils</p>
+        <p class="child">Lior</p>
+        <p>qui montera à la Torah et mettra les Téfilines<br />pour la première fois</p>
+        <div class="details">
+          <p><strong>Dimanche 29 novembre 2026</strong> à <strong>12 h 15</strong></p>
+          <p>Synagogue Or Zoreah · 60 avenue Montgolfier · Livry-Gargan</p>
+        </div>
+        <p class="blessing">Votre présence sera pour nous la plus belle des bénédictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPTE À REBOURS ========== -->
+  <section class="countdown-section" id="compte-a-rebours">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="eyebrow">Le grand jour approche</p>
+        <h2>Compte à rebours</h2>
+      </div>
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div class="unit"><div class="num" id="cd-days">--</div><div class="lbl">Jours</div></div>
+        <div class="unit"><div class="num" id="cd-hours">--</div><div class="lbl">Heures</div></div>
+        <div class="unit"><div class="num" id="cd-minutes">--</div><div class="lbl">Minutes</div></div>
+        <div class="unit"><div class="num" id="cd-seconds">--</div><div class="lbl">Secondes</div></div>
+      </div>
+      <p class="countdown-done" id="countdown-done">Mazal Tov Lior ! ✡️</p>
+    </div>
+  </section>
+
+  <!-- ========== CÉRÉMONIE & ITINÉRAIRE ========== -->
+  <section id="ceremonie">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="eyebrow">Programme</p>
+        <h2>La cérémonie</h2>
+      </div>
+      <div class="events">
+        <article class="event reveal">
+          <div class="icon" aria-hidden="true">🕍</div>
+          <h3>Montée à la Torah</h3>
+          <p class="when">Dimanche 29 novembre 2026 · 12 h 15</p>
+          <p class="where">Synagogue Or Zoreah<br />60 avenue Montgolfier<br />Livry-Gargan (93190)</p>
+          <div class="btn-row">
+            <a class="btn gold" id="btn-gmaps" target="_blank" rel="noopener">📍 Google Maps</a>
+            <a class="btn" id="btn-waze" target="_blank" rel="noopener">🚗 Waze</a>
+            <a class="btn" id="btn-apple" target="_blank" rel="noopener">🗺️ Plans</a>
+          </div>
+        </article>
+        <article class="event reveal">
+          <div class="icon" aria-hidden="true">📅</div>
+          <h3>Gardez la date</h3>
+          <p class="when">23 Kislev 5787</p>
+          <p class="where">Ajoutez l'événement à votre agenda<br />pour ne pas l'oublier.</p>
+          <div class="btn-row">
+            <button class="btn gold" id="btn-ics" type="button">Ajouter à mon agenda</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RSVP WHATSAPP ========== -->
+  <section id="rsvp">
+    <div class="container">
+      <div class="section-title reveal">
+        <p class="eyebrow">Réponse souhaitée</p>
+        <h2>Confirmez votre présence</h2>
+      </div>
+      <form class="rsvp-card reveal" id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="rsvp-name">Nom et prénom</label>
+          <input type="text" id="rsvp-name" name="name" autocomplete="name" placeholder="Ex. : Famille Cohen" required />
+        </div>
+        <fieldset class="field">
+          <legend>Serez-vous présent(e) ?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="presence" value="oui" checked /><span>✅ Avec joie</span></label>
+            <label class="choice"><input type="radio" name="presence" value="non" /><span>❌ Je ne pourrai pas</span></label>
+          </div>
+        </fieldset>
+        <div class="field" id="guests-field">
+          <label for="rsvp-guests">Nombre de personnes</label>
+          <input type="number" id="rsvp-guests" name="guests" min="1" max="20" value="1" inputmode="numeric" />
+        </div>
+        <fieldset class="field" id="events-field">
+          <legend>Je serai présent(e) à</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="events" value="la cérémonie du dimanche 29 novembre (12 h 15)" checked /> La cérémonie du dimanche 29 novembre · 12 h 15</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="rsvp-message">Un petit mot pour Lior (facultatif)</label>
+          <textarea id="rsvp-message" name="message" placeholder="Mazal Tov !"></textarea>
+        </div>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <button type="submit" class="btn whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.1 0 12 0 5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4z"/></svg>
+          Envoyer ma réponse sur WhatsApp
+        </button>
+        <p class="rsvp-hint">WhatsApp s'ouvre avec votre message prérempli : il ne reste qu'à appuyer sur « Envoyer ».</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p class="hebrew" lang="he">מזל טוב ליאור</p>
+    <p>Eyal &amp; Eva Dahan · Bar-Mitsva de Lior · 29 novembre 2026</p>
+  </footer>
+
+  <script>
+    // ================== À PERSONNALISER ==================
+    // Numéro WhatsApp au format international, sans « + » ni espaces (ex. : 33612345678).
+    const WHATSAPP_NUMBER = "33619850896";
+    // =====================================================
+
+    const EVENT_DATE = new Date("2026-11-29T12:15:00+01:00"); // heure de Paris
+    const PLACE_QUERY = "Synagogue Or Zoreah, 60 avenue Montgolfier, 93190 Livry-Gargan, France";
+
+    // ----- Étoiles du ciel d'accueil -----
+    const stars = document.getElementById("stars");
+    for (let i = 0; i < 60; i++) {
+      const s = document.createElement("span");
+      s.style.left = Math.random() * 100 + "%";
+      s.style.top = Math.random() * 100 + "%";
+      s.style.animationDelay = (Math.random() * 4).toFixed(2) + "s";
+      s.style.transform = "scale(" + (0.5 + Math.random() * 1.5).toFixed(2) + ")";
+      stars.appendChild(s);
+    }
+
+    // ----- Apparition au défilement -----
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    // ----- Compte à rebours -----
+    const pad = (n) => String(n).padStart(2, "0");
+    function tick() {
+      const diff = EVENT_DATE - new Date();
+      if (diff <= 0) {
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("countdown-done").style.display = "block";
+        return false;
+      }
+      const s = Math.floor(diff / 1000);
+      document.getElementById("cd-days").textContent = Math.floor(s / 86400);
+      document.getElementById("cd-hours").textContent = pad(Math.floor((s % 86400) / 3600));
+      document.getElementById("cd-minutes").textContent = pad(Math.floor((s % 3600) / 60));
+      document.getElementById("cd-seconds").textContent = pad(s % 60);
+      return true;
+    }
+    if (tick()) { const t = setInterval(() => { if (!tick()) clearInterval(t); }, 1000); }
+
+    // ----- Itinéraire -----
+    const q = encodeURIComponent(PLACE_QUERY);
+    document.getElementById("btn-gmaps").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+    document.getElementById("btn-waze").href = "https://waze.com/ul?q=" + q + "&navigate=yes";
+    document.getElementById("btn-apple").href = "https://maps.apple.com/?q=" + q;
+
+    // ----- Ajout à l'agenda (.ics) -----
+    document.getElementById("btn-ics").addEventListener("click", () => {
+      const ics = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Dahan//Bar-Mitsva Lior//FR",
+        "BEGIN:VEVENT",
+        "UID:bar-mitsva-lior-dahan-20261129@lior-dahan",
+        "DTSTAMP:20261001T000000Z",
+        "DTSTART:20261129T111500Z",
+        "DTEND:20261129T141500Z",
+        "SUMMARY:Bar-Mitsva de Lior Dahan",
+        "LOCATION:Synagogue Or Zoreah\\, 60 avenue Montgolfier\\, Livry-Gargan",
+        "DESCRIPTION:Eyal et Eva Dahan vous invitent à la Bar-Mitsva de leur fils Lior. Cérémonie à 12 h 15.",
+        "END:VEVENT", "END:VCALENDAR"
+      ].join("\r\n");
+      const url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
+      const a = document.createElement("a");
+      a.href = url; a.download = "bar-mitsva-lior-dahan.ics";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+
+    // ----- Musique de fond (facultative) -----
+    const audio = document.getElementById("bg-music");
+    const musicBtn = document.getElementById("music-btn");
+    const musicLabel = document.getElementById("music-label");
+    audio.addEventListener("loadedmetadata", () => musicBtn.classList.add("available"));
+    audio.addEventListener("error", () => musicBtn.classList.remove("available"));
+    function setPlaying(on) {
+      musicBtn.classList.toggle("playing", on);
+      musicBtn.setAttribute("aria-pressed", String(on));
+      musicLabel.textContent = on ? "Pause" : "Musique";
+    }
+    musicBtn.addEventListener("click", () => {
+      if (audio.paused) { audio.volume = 0.5; audio.play().then(() => setPlaying(true)).catch(() => {}); }
+      else { audio.pause(); setPlaying(false); }
+    });
+
+
+    // ----- Ouverture de la couverture et lancement de la musique -----
+    const welcomeScreen = document.getElementById("welcome-screen");
+    document.getElementById("welcome-open").addEventListener("click", () => {
+      audio.volume = 0.5;
+      audio.play().then(() => setPlaying(true)).catch(() => {
+        // La page s'ouvre même si le navigateur refuse encore la lecture audio.
+        musicBtn.classList.add("available");
+      });
+      welcomeScreen.classList.add("is-opening");
+      document.body.classList.remove("welcome-locked");
+      window.setTimeout(() => welcomeScreen.remove(), 700);
+    });
+
+    // ----- RSVP via WhatsApp -----
+    const form = document.getElementById("rsvp-form");
+    const errorEl = document.getElementById("form-error");
+    const guestsField = document.getElementById("guests-field");
+    const eventsField = document.getElementById("events-field");
+    form.querySelectorAll('input[name="presence"]').forEach((r) => r.addEventListener("change", () => {
+      const yes = form.presence.value === "oui";
+      guestsField.style.display = yes ? "" : "none";
+      eventsField.style.display = yes ? "" : "none";
+    }));
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      errorEl.style.display = "none";
+      const name = document.getElementById("rsvp-name").value.trim();
+      if (!name) { return showError("Merci d'indiquer votre nom."); }
+      if (!/^\d{8,15}$/.test(WHATSAPP_NUMBER)) {
+        return showError("Le numéro WhatsApp de la famille n'est pas encore configuré.");
+      }
+      const yes = form.presence.value === "oui";
+      const lines = ["✡️ *Bar-Mitsva de Lior Dahan*", "", "Nom : " + name];
+      if (yes) {
+        const guests = Math.max(1, parseInt(document.getElementById("rsvp-guests").value, 10) || 1);
+        const events = [...form.querySelectorAll('input[name="events"]:checked')].map((c) => c.value);
+        lines.push("Réponse : ✅ Présent(e)", "Nombre de personnes : " + guests);
+        if (events.length) lines.push("Présent(e) à : " + events.join(" et "));
+      } else {
+        lines.push("Réponse : ❌ Ne pourra pas être présent(e)");
+      }
+      const msg = document.getElementById("rsvp-message").value.trim();
+      if (msg) lines.push("", "Message : " + msg);
+      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    });
+    function showError(text) { errorEl.textContent = text; errorEl.style.display = "block"; }
+  </script>
+</body>
+</html>
